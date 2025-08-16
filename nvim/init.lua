@@ -15,3 +15,4 @@ require("vim-options")
 require("lazy").setup("plugins")
 
 vim.cmd("colorscheme rose-pine")
+vim.keymap.set("n", "<leader>cc", "<cmd>CopilotChatToggle<cr>", { desc = "Toggle Copilot Chat" })
