@@ -16,8 +16,7 @@ if vim.g.vscode then
 end
 
 require("vim-options")
+require("keymaps")
 require("lazy").setup("plugins")
 
 vim.cmd("colorscheme oxocarbon")
-vim.keymap.set("n", "<leader>cc", "<cmd>CopilotChatToggle<cr>", { desc = "Toggle Copilot Chat" })
-vim.keymap.set("v", "<C-c>", '"+y', { desc = "yank to system clipboard" })
