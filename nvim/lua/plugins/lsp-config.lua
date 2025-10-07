@@ -19,28 +19,35 @@ return {
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-      local lspconfig = require("lspconfig")
-      lspconfig.ts_ls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.solargraph.setup({
-        capabilities = capabilities
-      })
-      lspconfig.html.setup({
-        capabilities = capabilities
-      })
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.ruff.setup({
-        capabilities = capabilities
-      })
-      lspconfig.gopls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.ltex.setup({
-        capabilities = capabilities
-      })
+      local lsp = vim.lsp.configs -- new API entrypoint
+      local util = require("lspconfig.util")
+
+      vim.lsp.config["ts_ls"] = {
+        capabilities = capabilities,
+      }
+      vim.lsp.config["solargraph"] = {
+        capabilities = capabilities,
+      }
+      vim.lsp.config["html"] = {
+        capabilities = capabilities,
+      }
+      vim.lsp.config["lua_ls"] = {
+        capabilities = capabilities,
+      }
+      vim.lsp.config["ruff"] = {
+        capabilities = capabilities,
+      }
+      vim.lsp.config["gopls"] = {
+        capabilities = capabilities,
+      }
+      vim.lsp.config["ltex"] = {
+        capabilities = capabilities,
+      }
+
+      -- Start each server
+      for name, config in pairs(vim.lsp.config) do
+        vim.lsp.start(config)
+      end
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
@@ -49,3 +56,4 @@ return {
     end,
   },
 }
+  
