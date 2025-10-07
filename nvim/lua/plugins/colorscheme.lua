@@ -14,5 +14,9 @@ return {
     opts = {
       transparent = true
     }
+  },
+  {
+    'nyoom-engineering/oxocarbon.nvim',
+    lazy = false,
   }
 }
