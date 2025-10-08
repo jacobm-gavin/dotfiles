@@ -19,4 +19,5 @@ require("vim-options")
 require("keymaps")
 require("lazy").setup("plugins")
 
+vim.diagnostic.config( { virtual_text = true } )
 vim.cmd("colorscheme oxocarbon")
