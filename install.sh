@@ -14,12 +14,12 @@ install_config() {
     # if it does, back it up
     echo "$XDG_CONFIG_HOME/$cfg already exists, backing it up to $XDG_CONFIG_HOME/$cfg.bak"
     mv "$XDG_CONFIG_HOME/$cfg" "$XDG_CONFIG_HOME/$cfg.bak"
-    cp "$cfg" "$XDG_CONFIG_HOME/$cfg"
+    cp -r "$cfg" "$XDG_CONFIG_HOME/$cfg"
     echo "$cfg config installed"
   else
     echo "moving $cfg config to $XDG_CONFIG_HOME/$cfg"
     mkdir -p "$XDG_CONFIG_HOME"
-    cp "$cfg" "$XDG_CONFIG_HOME/$cfg"
+    cp -r "$cfg" "$XDG_CONFIG_HOME/$cfg"
   fi
 }
 
