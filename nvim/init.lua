@@ -10,8 +10,10 @@ require("plugins.lualine")
 require("plugins.rainbow")
 require("plugins.autopairs")
 require("plugins.gitsigns")
-
-require("lsp.lsp")
-
+require("plugins.lsp")
 require("features.config")
 require("features.keybinds")
+
+
+
+print("loaded")

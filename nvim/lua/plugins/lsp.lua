@@ -4,10 +4,9 @@ vim.lsp.enable({
   "lua_ls",
   "texlab",
   "ts_ls",
-  "pylsp",
+  "pylsp"
 
 })
 vim.diagnostic.config({ virtual_text = true })
-
 
 
