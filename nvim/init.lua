@@ -11,6 +11,7 @@ require("plugins.rainbow")
 require("plugins.autopairs")
 require("plugins.gitsigns")
 require("plugins.lsp")
+require("plugins.diag")
 require("features.config")
 require("features.keybinds")
 

@@ -1,8 +1,6 @@
 vim.g.mapleader = " "
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-vim.cmd("colorscheme gruvbox")
-
 
 -- ~/.config/nvim-new/lua/configs.lua
 local opt = vim.opt
@@ -31,3 +29,13 @@ opt.completeopt = { "menuone", "popup", "noinsert" } -- Options for completion m
 opt.winborder = "rounded" -- Use rounded borders for windows
 opt.hlsearch = false -- Disable highlighting of search results
 vim.cmd.filetype("plugin indent on") -- Enable filetype detection, plugins, and indentation
+
+
+if vim.env.THEME_NORD then
+    vim.cmd.colorscheme("nord")
+elseif vim.env.THEME_GRUVBOX then
+    vim.cmd.colorscheme("gruvbox")
+else
+    -- set default
+    vim.cmd.colorscheme("oxocarbon")
+end
