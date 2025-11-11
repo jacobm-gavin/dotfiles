@@ -1,19 +1,7 @@
-require("plugins.telescope")
-require("plugins.colors")
-require("plugins.tmuxNav")
-require("plugins.nvimtree")
-require("plugins.noice")
-require("plugins.mason")
-require("plugins.cmp")
-require("plugins.treesitter")
-require("plugins.lualine")
-require("plugins.rainbow")
-require("plugins.autopairs")
-require("plugins.gitsigns")
-require("plugins.lsp")
-require("plugins.diag")
+require("plugins.plugins")
 require("features.config")
 require("features.keybinds")
+
 
 
 

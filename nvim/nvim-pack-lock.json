@@ -3,11 +3,22 @@
     "blink.cmp": {
       "version": "1.0.0 - 2.0.0"
     },
+    "copilot.vim": {
+      "rev": "da369d9",
+      "src": "https://github.com/github/copilot.vim"
+    },
+    "gitsigns.nvim": [],
     "gruvbox.nvim": [],
+    "lualine.nvim": [],
     "mason.nvim": [],
+    "neomarks": {
+      "rev": "085ce47",
+      "src": "https://github.com/saccarosium/neomarks"
+    },
     "noice.nvim": [],
     "nord.nvim": [],
     "nui.nvim": [],
+    "nvim-autopairs": [],
     "nvim-notify": [],
     "nvim-tmux-navigation": [],
     "nvim-tree.lua": [],
@@ -15,8 +26,25 @@
       "version": "'master'"
     },
     "nvim-web-devicons": [],
+    "oxocarbon.nvim": {
+      "rev": "9f85f60",
+      "src": "https://github.com/nyoom-engineering/oxocarbon.nvim"
+    },
     "plenary.nvim": [],
+    "rainbow-delimiters.nvim": [],
     "rose-pine": [],
-    "telescope.nvim": []
+    "sidekick.nvim": {
+      "rev": "c2bdf8c",
+      "src": "https://github.com/folke/sidekick.nvim"
+    },
+    "smear-cursor.nvim": {
+      "rev": "abfa583",
+      "src": "https://github.com/sphamba/smear-cursor.nvim"
+    },
+    "telescope.nvim": [],
+    "tiny-inline-diagnostic.nvim": {
+      "rev": "994c13d",
+      "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim"
+    }
   }
 }

@@ -28,7 +28,8 @@ opt.undofile = true -- Enable persistent undo
 opt.completeopt = { "menuone", "popup", "noinsert" } -- Options for completion menu
 opt.winborder = "rounded" -- Use rounded borders for windows
 opt.hlsearch = false -- Disable highlighting of search results
-vim.cmd.filetype("plugin indent on") -- Enable filetype detection, plugins, and indentation
+vim.diagnostic.config({virtual_text = false})
+vim.notify = require("notify")
 
 
 if vim.env.THEME_NORD then
@@ -37,5 +38,15 @@ elseif vim.env.THEME_GRUVBOX then
     vim.cmd.colorscheme("gruvbox")
 else
     -- set default
-    vim.cmd.colorscheme("oxocarbon")
+    vim.cmd.colorscheme("gruvbox")
 end
+
+vim.lsp.enable({
+  "bashls",
+  "gopls",
+  "lua_ls",
+  "texlab",
+  "ts_ls",
+  "pylsp",
+  "copilot-language-server",
+})
