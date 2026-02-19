@@ -16,6 +16,10 @@ vim.keymap.set('n', "<C-j>", tmuxnav.NvimTmuxNavigateDown)
 vim.keymap.set('n', "<C-k>", tmuxnav.NvimTmuxNavigateUp)
 vim.keymap.set('n', "<C-l>", tmuxnav.NvimTmuxNavigateRight)
 
+vim.keymap.set("n", "<A-,>", "<cmd>BufferPrevious<CR>")
+vim.keymap.set("n", "<A-.>", "<cmd>BufferNext<CR>")
+vim.keymap.set("n", "<A-c>", "<cmd>BufferClose<CR>")
+
 vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle)
 vim.keymap.set("v", "<C-c>", '"+y' )
 
@@ -31,6 +35,8 @@ vim.keymap.set("n", "<leader>cli", function() require("sidekick.cli").toggle({na
 vim.keymap.set("n", "<leader>cd", "<cmd>Copilot disable<CR>")
 vim.keymap.set("n", "<leader>ce", "<cmd>Copilot enable<CR>")
 
+vim.keymap.set("n", "wq", "<cmd>wqall<CR>")
+vim.keymap.set("n", "qq", "<cmd>qall!<CR>")
 
 -- LSP --
 

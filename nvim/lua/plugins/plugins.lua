@@ -22,11 +22,13 @@ vim.pack.add({
     { src = "https://github.com/alexghergh/nvim-tmux-navigation"},
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
     { src = "https://github.com/folke/sidekick.nvim" },
-    { src = "https://github.com/github/copilot.vim" },
+    { src = "https://github.com/folke/snacks.nvim" },
+    { src = "https://github.com/romgrk/barbar.nvim" },
+    { src = "https://github.com/kylechui/nvim-surround" },
 })
 
 
-
+require("nvim-surround").setup({})
 require("sidekick").setup{}
 require("rainbow-delimiters.setup").setup{}
 require("nvim-tree").setup()
@@ -44,6 +46,7 @@ require("telescope").setup{
         }
     }
 }
+
 require('blink.cmp').setup({
     fuzzy = { implementation = 'prefer_rust_with_warning' },
     signature = { enabled = true },
@@ -51,7 +54,7 @@ require('blink.cmp').setup({
         preset = "default",
         ["<C-space>"] = {},
         ["<C-p>"] = {},
-        --["<Tab>"] = { "accept", "fallback" },
+        ["<Tab>"] = { "accept", "fallback" },
         --["<S-Tab>"] = {},
         ["<C-y>"] = { "show", "show_documentation", "hide_documentation" },
         ["<C-Return>"] = { "select_and_accept" },
