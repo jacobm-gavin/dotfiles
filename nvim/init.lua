@@ -5,4 +5,6 @@ require("features.keybinds")
 
 
 
-print("loaded")
+vim.cmd("colorscheme rose-pine")
+print("Why do programmers prefer dark mode? Because light attracts bugs!")
+

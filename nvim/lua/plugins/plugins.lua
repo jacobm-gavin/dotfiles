@@ -1,10 +1,6 @@
 vim.pack.add({
     { src = "https://github.com/windwp/nvim-autopairs" },
     { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1") },
-    { src = "https://github.com/ellisonleao/gruvbox.nvim"},
-    { src = "https://github.com/rose-pine/neovim", name = "rose-pine"},
-    { src = "https://github.com/shaunsingh/nord.nvim"},
-    { src = "https://github.com/nyoom-engineering/oxocarbon.nvim"},
     { src = "https://github.com/rachartier/tiny-inline-diagnostic.nvim" },
     { src = "https://github.com/lewis6991/gitsigns.nvim"},
     { src = "https://github.com/nvim-lualine/lualine.nvim"},
@@ -21,15 +17,23 @@ vim.pack.add({
     { src = "https://github.com/nvim-lua/plenary.nvim"},
     { src = "https://github.com/alexghergh/nvim-tmux-navigation"},
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
-    { src = "https://github.com/folke/sidekick.nvim" },
     { src = "https://github.com/folke/snacks.nvim" },
-    { src = "https://github.com/romgrk/barbar.nvim" },
     { src = "https://github.com/kylechui/nvim-surround" },
+    { src = "https://github.com/greggh/claude-code.nvim" },
+
+    -- COLORSCHEMES --
+
+    { src = "https://github.com/ellisonleao/gruvbox.nvim"},
+    { src = "https://github.com/rose-pine/neovim", name = "rose-pine"},
+    { src = "https://github.com/shaunsingh/nord.nvim"},
+    { src = "https://github.com/nyoom-engineering/oxocarbon.nvim"},
+    { src = "https://github.com/scottmckendry/cyberdream.nvim"},
+    { src = "https://github.com/pineapplegiant/spaceduck"},
+
 })
 
 
 require("nvim-surround").setup({})
-require("sidekick").setup{}
 require("rainbow-delimiters.setup").setup{}
 require("nvim-tree").setup()
 require("neomarks").setup({})
@@ -46,6 +50,17 @@ require("telescope").setup{
         }
     }
 }
+
+require("claude-code").setup({
+    window = {
+        position = "vertical"
+    },
+    keymaps = {
+        toggle = {
+            normal = "<C-b>"
+        }
+    }
+})
 
 require('blink.cmp').setup({
     fuzzy = { implementation = 'prefer_rust_with_warning' },

@@ -24,7 +24,7 @@ vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle)
 vim.keymap.set("v", "<C-c>", '"+y' )
 
 vim.keymap.set("n", "<C-a>", function() require("neomarks").mark_file() end)
-vim.keymap.set("n", "<leader>h", function() require("neomarks").menu_toggle() end)
+vim.keymap.set("n", "<C-s>", function() require("neomarks").menu_toggle() end)
 
 vim.keymap.set("n", "<leader>|", "<cmd>vsplit<CR>")
 vim.keymap.set("n", "<leader>-", "<cmd>split<CR>")

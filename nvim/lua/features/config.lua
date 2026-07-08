@@ -3,6 +3,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- ~/.config/nvim-new/lua/configs.lua
+
 local opt = vim.opt
 opt.colorcolumn = "80" -- Highlight column 80
 opt.signcolumn = "yes:1" -- Always show sign column
@@ -49,4 +50,5 @@ vim.lsp.enable({
   "ts_ls",
   "pylsp",
   "copilot-language-server",
+  "docker-language-server",
 })
